@@ -1,7 +1,5 @@
 /*
  * Custom 100% Keyboard - Right/Peripheral Controller
- * Rows: P1.04, P0.11, P1.00, P0.24, P0.22, P0.20
- * Cols: P0.09, P0.10, P1.11, P1.13, P1.15, P0.02, P0.29, P0.31, P1.06, P0.17
  */
 
 #include <dt-bindings/zmk/matrix_transform.h>
@@ -29,29 +27,28 @@
     kscan0: kscan {
         compatible = "zmk,kscan-gpio-matrix";
         wakeup-source;
-
         diode-direction = "col2row";
 
         row-gpios
-            = <&gpio1 4  (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>   /* Row 1: P1.04 */
-            , <&gpio0 11 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>   /* Row 2: P0.11 */
-            , <&gpio1 0  (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>   /* Row 3: P1.00 */
-            , <&gpio0 24 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>   /* Row 4: P0.24 */
-            , <&gpio0 22 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>   /* Row 5: P0.22 */
-            , <&gpio0 20 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>   /* Row 6: P0.20 */
+            = <&gpio1 4  (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+            , <&gpio0 11 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+            , <&gpio1 0  (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+            , <&gpio0 24 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+            , <&gpio0 22 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+            , <&gpio0 20 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
             ;
 
         col-gpios
-            = <&gpio0 9  GPIO_ACTIVE_HIGH>   /* Col 1:  P0.09 */
-            , <&gpio0 10 GPIO_ACTIVE_HIGH>   /* Col 2:  P0.10 */
-            , <&gpio1 11 GPIO_ACTIVE_HIGH>   /* Col 3:  P1.11 */
-            , <&gpio1 13 GPIO_ACTIVE_HIGH>   /* Col 4:  P1.13 */
-            , <&gpio1 15 GPIO_ACTIVE_HIGH>   /* Col 5:  P1.15 */
-            , <&gpio0 2  GPIO_ACTIVE_HIGH>   /* Col 6:  P0.02 */
-            , <&gpio0 29 GPIO_ACTIVE_HIGH>   /* Col 7:  P0.29 */
-            , <&gpio0 31 GPIO_ACTIVE_HIGH>   /* Col 8:  P0.31 */
-            , <&gpio1 6  GPIO_ACTIVE_HIGH>   /* Col 9:  P1.06 */
-            , <&gpio0 17 GPIO_ACTIVE_HIGH>   /* Col 10: P0.17 */
+            = <&gpio0 9  (GPIO_ACTIVE_HIGH)>
+            , <&gpio0 10 (GPIO_ACTIVE_HIGH)>
+            , <&gpio1 11 (GPIO_ACTIVE_HIGH)>
+            , <&gpio1 13 (GPIO_ACTIVE_HIGH)>
+            , <&gpio1 15 (GPIO_ACTIVE_HIGH)>
+            , <&gpio0 2  (GPIO_ACTIVE_HIGH)>
+            , <&gpio0 29 (GPIO_ACTIVE_HIGH)>
+            , <&gpio0 31 (GPIO_ACTIVE_HIGH)>
+            , <&gpio1 6  (GPIO_ACTIVE_HIGH)>
+            , <&gpio0 17 (GPIO_ACTIVE_HIGH)>
             ;
     };
 };
