@@ -1,0 +1,14 @@
+file_format: "1"
+id: custom100
+name: Custom 100% Keyboard
+type: shield
+url: https://github.com/zmkfirmware/zmk
+requires:
+  - pro_micro
+exposes:
+  - pro_micro_i2c
+features:
+  - keys
+siblings:
+  - custom100_left
+  - custom100_right
